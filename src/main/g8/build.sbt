@@ -8,11 +8,11 @@ val V = new {
   val zioInteropCats = "2.2.0.1"
   val zio = "1.0.3"
   val distage = "0.10.19"
-  val tapir = "0.16.16"
+  val tapir = "0.17.1"
   val sttp = "2.2.9"
-  val elastic4s = "7.9.2"
+  val elastic4s = "7.10.0"
 
-  val scalacheck = "1.15.1"
+  val scalacheck = "1.15.2"
 
   val betterMonadicFor = "0.3.1"
   val kindProjector = "0.11.2"
