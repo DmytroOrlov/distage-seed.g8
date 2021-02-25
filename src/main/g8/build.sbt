@@ -6,7 +6,7 @@ ThisBuild / scalacOptions ++= Seq(
 
 val V = new {
   val zioInteropCats = "2.2.0.1"
-  val zio = "1.0.3"
+  val zio = "1.0.4-2"
   val distage = "0.10.19"
   val tapir = "0.17.1"
   val sttp = "2.2.9"
@@ -80,11 +80,12 @@ lazy val `$name$` = (project in file("."))
     addCompilerPlugin(Deps.kindProjector),
   )
   .dependsOn(macros)
+  .aggregate(macros)
 
 lazy val macros = project
   .disablePlugins(RevolverPlugin)
   .settings(
-    scalaVersion := "2.13.3",
+    scalaVersion := "2.13.4",
     libraryDependencies ++= Seq(
       compilerPlugin("com.github.ghik" % "silencer-plugin" % V.silencer cross CrossVersion.full),
       "com.github.ghik" % "silencer-lib" % V.silencer % Provided cross CrossVersion.full,
