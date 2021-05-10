@@ -5,14 +5,14 @@ ThisBuild / scalacOptions ++= Seq(
 )
 
 val V = new {
-  val zioInteropCats = "2.3.1.0"
-  val zio = "1.0.5"
-  val distage = "1.0.3"
-  val tapir = "0.16.16"
-  val sttp = "2.2.9"
-  val elastic4s = "7.11.0"
+  val zioInteropCats = "2.4.1.0"
+  val zio = "1.0.7"
+  val distage = "1.0.6"
+  val tapir = "0.17.19"
+  val sttp = "3.3.1"
+  val elastic4s = "7.12.1"
 
-  val scalacheck = "1.15.3"
+  val scalacheck = "1.15.4"
 
   val betterMonadicFor = "0.3.1"
   val kindProjector = "0.11.3"
@@ -35,7 +35,7 @@ val Deps = new {
   val tapirSwaggerUiHttp4s = "com.softwaremill.sttp.tapir" %% "tapir-swagger-ui-http4s" % V.tapir
 
   val sttpClientCirce = "com.softwaremill.sttp.client" %% "circe" % V.sttp
-  val asyncHttpClientBackendZio = "com.softwaremill.sttp.client" %% "async-http-client-backend-zio" % V.sttp
+  val asyncHttpClientBackendZio = "com.softwaremill.sttp.client3" %% "async-http-client-backend-zio" % V.sttp
 
   val elastic4sClientSttp = "com.sksamuel.elastic4s" %% "elastic4s-client-sttp" % V.elastic4s
   val elastic4sEffectZio = "com.sksamuel.elastic4s" %% "elastic4s-effect-zio" % V.elastic4s
